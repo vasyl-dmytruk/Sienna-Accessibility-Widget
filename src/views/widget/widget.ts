@@ -8,12 +8,18 @@ import translateMenu from "../menu/translateMenu";
 export function renderWidget(options: ISeinnaSettings) {
     let {
         position = "bottom-left",
-        offset=[20,20]
+        offset=[20,20],
+        classes=''
     } = options;
 
     const widget: HTMLElement = document.createElement("div");
     widget.innerHTML = template;
     widget.classList.add("asw-container");
+
+    if (classes) {
+        const classesArr = classes.split(' ');
+        widget.classList.add(...classesArr);
+    }
 
     let $btn: HTMLElement = widget.querySelector(".asw-menu-btn");
 

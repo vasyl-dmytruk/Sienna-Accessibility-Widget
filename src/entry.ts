@@ -9,6 +9,7 @@ function initializeSienna() {
     let lang: string = getDataAttribute("lang");
     let position: string = getDataAttribute("position")
     let offset: string | number[] = getDataAttribute("offset");
+    let classes: string = getDataAttribute("classes");
 
     if(!lang) {
         lang = document?.querySelector('html')?.getAttribute('lang')?.replace(/[_-].*/, '');
@@ -24,7 +25,8 @@ function initializeSienna() {
     sienna({
         lang,
         position,
-        offset
+        offset,
+        classes
     });
 }
 

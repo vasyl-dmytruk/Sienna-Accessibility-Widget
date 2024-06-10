@@ -6,12 +6,14 @@ export interface ISeinnaSettings {
     lang?: any,
     position?: any | 'bottom-right' | 'bottom-left' | 'top-left' | 'top-right' | 'center-left' | 'center-right',
     footer?: any,
-    offset?: any
+    offset?: any,
+    classes?: string
 }
 
 export const DEFAULT_OPTIONS: ISeinnaSettings = {
     lang: 'en',
-    position: 'bottom-left'
+    position: 'bottom-left',
+    classes: ''
 }
 
 export default function sienna(args?: ISeinnaSettings) {
